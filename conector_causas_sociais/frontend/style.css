@@ -1,55 +1,143 @@
-/* Estilos personalizados para o Conector de Causas Sociais */
-
-/* Adicione aqui quaisquer estilos CSS personalizados que você precise.
-   Tailwind CSS já está incluído e é usado para a maior parte da estilização.
-   Este arquivo pode ser usado para:
-   - Estilos mais complexos ou específicos.
-   - Overrides de estilos do Tailwind, se necessário (embora seja preferível usar as classes do Tailwind).
-   - Animações personalizadas.
-*/
-
-body {
-    /* Exemplo: você poderia definir uma cor de fundo padrão aqui se não estivesse usando gradiente no body do HTML */
-    /* background-color: #f0f2f5; */
-}
-
-/* Exemplo de um estilo personalizado para um elemento específico, se necessário */
-/*
-.custom-button-style {
-    @apply bg-green-500 text-white font-bold py-2 px-4 rounded;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2a7d2e;
+    margin-bottom: 20px;
+  }
+  
+  .input-section, .chat-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e9f5e9;
+  }
+  
+  .input-section h2, .chat-section h2 {
+    color: #2a7d2e;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
     transition: background-color 0.3s ease;
-}
-
-.custom-button-style:hover {
-    @apply bg-green-700;
-}
-*/
-
-/* Estilizando a barra de rolagem para áreas de overflow (opcional, mas melhora a estética) */
-/* Para Webkit (Chrome, Safari, Edge novo) */
-::-webkit-scrollbar {
-    width: 8px; /* Largura da barra de rolagem */
-    height: 8px; /* Altura da barra de rolagem (para scroll horizontal) */
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor da trilha da barra de rolagem */
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #c5c5c5; /* Cor do "polegar" da barra de rolagem */
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8; /* Cor do "polegar" ao passar o mouse */
-}
-
-/* Para Firefox (um pouco mais limitado) */
-/* Você pode precisar habilitar `layout.css.scrollbar-colors.enabled` em about:config para cores */
-/* Ou usar `scrollbar-width: thin;` e `scrollbar-color: #c5c5c5 #f1f1f1;` */
-#chat-area, #suggestions-area {
-    scrollbar-width: thin;
-    scrollbar-color: #c5c5c5 #f1f1f1;
-}
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+  }
+  
+  .chat-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .chat-message.user {
+    background-color: #dcf8c6;
+    text-align: right;
+  }
+  
+  .chat-message.bot {
+    background-color: #e0e0e0;
+    text-align: left;
+  }
+  
+  .contact-button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .email-optin {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .email-optin input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  
+    button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
