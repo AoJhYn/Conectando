@@ -1,0 +1,55 @@
+/* Estilos personalizados para o Conector de Causas Sociais */
+
+/* Adicione aqui quaisquer estilos CSS personalizados que você precise.
+   Tailwind CSS já está incluído e é usado para a maior parte da estilização.
+   Este arquivo pode ser usado para:
+   - Estilos mais complexos ou específicos.
+   - Overrides de estilos do Tailwind, se necessário (embora seja preferível usar as classes do Tailwind).
+   - Animações personalizadas.
+*/
+
+body {
+    /* Exemplo: você poderia definir uma cor de fundo padrão aqui se não estivesse usando gradiente no body do HTML */
+    /* background-color: #f0f2f5; */
+}
+
+/* Exemplo de um estilo personalizado para um elemento específico, se necessário */
+/*
+.custom-button-style {
+    @apply bg-green-500 text-white font-bold py-2 px-4 rounded;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button-style:hover {
+    @apply bg-green-700;
+}
+*/
+
+/* Estilizando a barra de rolagem para áreas de overflow (opcional, mas melhora a estética) */
+/* Para Webkit (Chrome, Safari, Edge novo) */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+    height: 8px; /* Altura da barra de rolagem (para scroll horizontal) */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor da trilha da barra de rolagem */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; /* Cor do "polegar" ao passar o mouse */
+}
+
+/* Para Firefox (um pouco mais limitado) */
+/* Você pode precisar habilitar `layout.css.scrollbar-colors.enabled` em about:config para cores */
+/* Ou usar `scrollbar-width: thin;` e `scrollbar-color: #c5c5c5 #f1f1f1;` */
+#chat-area, #suggestions-area {
+    scrollbar-width: thin;
+    scrollbar-color: #c5c5c5 #f1f1f1;
+}
